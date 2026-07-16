@@ -79,6 +79,13 @@ export default function ContactUs() {
     }
   };
 
+  const socials = [
+  { icon: InstagramIcon, href: "https://www.instagram.com/tavewoventures/" },
+  { icon: XIcon, href: "#" },
+  { icon: LinkedinIcon, href: "https://ng.linkedin.com/in/tavewo-ventures-625059326" },
+  { icon: FacebookIcon, href: "https://www.facebook.com/profile.php?id=61564940827447" },
+  ];
+
   return (
     <div>
       {/* Hero */}
@@ -208,23 +215,28 @@ export default function ContactUs() {
           {/* Corporate HQ card */}
           <Reveal delay={0.15} className="border border-slate-200 rounded-2xl p-6 md:p-8">
             <h3 className="text-2xl font-extrabold mb-6">Corporate HQ</h3>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-center gap-3 text-sm font-medium">
-                <Phone size={18} className="text-brand" /> (+234) 905821435
-              </li>
-              <li className="flex items-center gap-3 text-sm font-medium">
-                <Mail size={18} className="text-brand" /> hello@Tavewo.com
-              </li>
-              <li className="flex items-center gap-3 text-sm font-medium">
-                <MapPin size={18} className="text-brand" /> Corporate HQ, Lagos, Nigeria
-              </li>
-            </ul>
+            <div className="space-y-4 mb-8">
+              <a href="tel:+2347030786368" className="flex items-center gap-3 text-sm font-medium">
+                <Phone size={18} className="text-[#14213d]" />
+                +234 0703 078 6368 
+              </a>
+              <a href="tel:+2349047432641" className="flex items-center gap-3  text-sm font-medium">
+                <Phone size={18} className="text-[#14213d]" />
+                +234 0904 743 2641
+              </a>
+              <a href="mailto:tavewo@tavewo.com" className="flex items-center gap-3 text-sm font-medium hover:underline">
+                <Mail size={18} className="text-[#14213d]" /> tavewo@tavewo.com
+              </a>
+              <div className="flex items-start gap-3 text-sm font-medium">
+                <MapPin size={18} className="text-[#14213d] mt-0.5 flex-shrink-0" /> <span>24, Abebi shopping complex, Mosafejo bus stop, Ibadan, Nigeria.</span>
+              </div>
+            </div>
             <h4 className="font-semibold mb-3">Connect With Us</h4>
             <div className="flex gap-3">
-              {[InstagramIcon, XIcon, LinkedinIcon, FacebookIcon].map((Icon, i) => (
+              {socials.map(({ icon: Icon, href }, i) => (
                 <motion.a
                   key={i}
-                  href="#"
+                  href={href}
                   whileHover={{ scale: 1.12, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center hover:bg-navy hover:text-white hover:border-navy transition-colors"
@@ -242,7 +254,7 @@ export default function ContactUs() {
         <iframe
           title="TAVEWO Corporate HQ Location"
           className="w-full h-full border-0"
-          src="https://maps.google.com/maps?q=Lagos,Nigeria&t=&z=11&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=Ibadan,Nigeria&t=&z=11&ie=UTF8&iwloc=&output=embed"
           loading="lazy"
         />
       </section>

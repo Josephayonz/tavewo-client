@@ -47,10 +47,10 @@ const FacebookIcon = (props) => (
 );
 
 const socials = [
-  { icon: InstagramIcon, href: "#" },
+  { icon: InstagramIcon, href: "https://www.instagram.com/tavewoventures/" },
   { icon: XIcon, href: "#" },
-  { icon: LinkedinIcon, href: "#" },
-  { icon: FacebookIcon, href: "#" },
+  { icon: LinkedinIcon, href: "https://ng.linkedin.com/in/tavewo-ventures-625059326" },
+  { icon: FacebookIcon, href: "https://www.facebook.com/profile.php?id=61564940827447" },
 ];
 
 const companyLinks = [
@@ -120,21 +120,29 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
+          
           <div>
             <h4 className="font-bold mb-4">Get In Touch</h4>
-            <ul className="space-y-3 text-sm text-navy/85 transition-colors">
-              <li className="flex items-center gap-3 text-sm font-medium hover:text-white">
-                <Phone size={18} className="text-[#14213d]" /> (+234) 905821435
-              </li>
-              <li className="flex items-center gap-3 text-sm font-medium hover:text-white">
-                <Mail size={18} className="text-[#14213d]" /> hello@Tavewo.com
-              </li>
-              <li className="flex items-center gap-3 text-sm font-medium hover:text-white">
-                <MapPin size={18} className="text-[#14213d]" /> Corporate HQ, Lagos, Nigeria
-              </li>
-            </ul>
+            <div className="space-y-3 text-sm text-navy/85 transition-colors">
+              <a href="tel:+2347030786368" className="flex items-center gap-3 text-sm font-medium hover:text-white transition-colors">
+                <Phone size={18} className="text-[#14213d]" />
+                +234 0703 078 6368 
+              </a>
+              <a href="tel:+2349047432641" className="flex items-center gap-3  text-sm font-medium hover:text-white transition-colors">
+                <Phone size={18} className="text-[#14213d]" />
+                +234 0904 743 2641
+              </a>
+              <a href="mailto:tavewo@tavewo.com" className="flex items-center gap-3 text-sm font-medium hover:text-white hover:underline transition-colors">
+                <Mail size={18} className="text-[#14213d]" />
+                tavewo@tavewo.com
+              </a>
+              <div className="flex items-start gap-3 text-sm font-medium">
+                <MapPin size={18} className="text-[#14213d] mt-0.5 flex-shrink-0" />
+                <span>24, Abebi shopping complex, Mosafejo bus stop, Ibadan, Nigeria.</span>
+              </div>
+            </div>
           </div>
+
         </div>
 
         <div className="border-t border-navy/20 mt-10 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-sm text-navy/80">

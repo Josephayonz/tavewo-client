@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import HeroBanner from "../components/HeroBanner";
 import Reveal from "../components/Reveal";
 import { MotionButton, buttonHover } from "../lib/motion";
+import {Link} from "react-router-dom";
 
 const divisions = [
   {
@@ -70,7 +71,9 @@ export default function Division() {
                 {...buttonHover}
                 className="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark transition-colors"
               >
-                Talk to this division <ArrowRight size={18} />
+                <Link to="/contact" className="flex items-center gap-2">
+                  Talk to this division <ArrowRight size={18} />
+                </Link>
               </MotionButton>
             </Reveal>
           </div>
